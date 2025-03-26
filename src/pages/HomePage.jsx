@@ -22,9 +22,9 @@ export default function HomePage() {
           <CardTitle className='text-base'>Note</CardTitle>
         </CardHeader>
         <CardContent className='text-muted-foreground grid gap-4'>
-          <p>
-            Siapapun kamu yang membuka website ini, sebelumnya mohon mmaaf
-            karena website ini di buat khusus hanya untuk{' '}
+          <p className='text-justify' >
+            Siapapun kamu yang membuka website ini, sebelumnya mohon maaf karena
+            website ini di buat khusus hanya untuk{' '}
             <strong className='text-primary'>Silvana Nabila Shyifa</strong>.
             Selamat menyaksikan
           </p>
