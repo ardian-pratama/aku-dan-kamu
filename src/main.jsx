@@ -7,7 +7,7 @@ import { router } from './routes/index.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ThemeProvider defaultTheme='system' storageKey='theme'>
+    <ThemeProvider defaultTheme='light' storageKey='theme'>
       <RouterProvider router={router} />
     </ThemeProvider>
   </StrictMode>

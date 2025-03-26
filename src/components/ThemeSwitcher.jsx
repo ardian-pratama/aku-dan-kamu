@@ -5,9 +5,7 @@ import { useTheme } from '../context/ThemeContext';
 export default function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
   const isDark =
-    theme === 'dark' ||
-    (theme === 'system' &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches);
+    theme === 'dark'
 
   return (
     <Button size='icon' onClick={() => setTheme(isDark ? 'light' : 'dark')}>
