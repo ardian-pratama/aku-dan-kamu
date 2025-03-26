@@ -32,10 +32,10 @@ export default function HomePage() {
     <div className='flex flex-col gap-16'>
       <Section className='grid md:grid-cols-5 gap-5'>
         <div className='md:col-span-3 flex flex-col gap-5'>
-          <div className='flex flex-col items-center w-fit self-center font-agbalumo text-6xl text-primary relative'>
-            <h1 className='mr-40'>Me</h1>
-            <h1 className='absolute top-7'>&amp;</h1>
-            <h1 className='ml-40'>You</h1>
+          <div className='flex flex-col self-center font-agbalumo text-5xl text-primary relative'>
+            <h1>Aku</h1>
+            <h1 className='absolute left-[86px] top-7 text-blue-500 dark:text-blue-600'>&amp;</h1>
+            <h1 className='ml-[120px]'>Kamu</h1>
           </div>
           <p className='text-justify'>
             Seperti halnya waktu yang terus berjalan, begitu banyak momen yang
