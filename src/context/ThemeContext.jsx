@@ -44,12 +44,12 @@ export function ThemeProvider({
   };
 
   return (
-    <ThemeProviderContext.Provider
+    <ThemeContext.Provider
       {...props}
       value={value}
     >
       {children}
-    </ThemeProviderContext.Provider>
+    </ThemeContext.Provider>
   );
 }
 
