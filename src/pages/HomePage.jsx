@@ -9,6 +9,8 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { motion } from 'motion/react';
+import Section from '../components/Section.jsx';
+import Timer from '../components/Timer.jsx';
 
 const cards = [
   {
@@ -27,49 +29,54 @@ const cards = [
 
 export default function HomePage() {
   return (
-    <div className='flex flex-col gap-10'>
-      <section className='grid md:grid-cols-5 gap-5'>
+    <div className='flex flex-col gap-16'>
+      <Section className='grid md:grid-cols-5 gap-5'>
         <div className='md:col-span-3 flex flex-col gap-5'>
           <div className='flex flex-col items-center w-fit self-center font-agbalumo text-6xl text-primary relative'>
-            <p className='mr-40'>Me</p>
-            <p className='absolute top-7'>&amp;</p>
-            <p className='ml-40'>You</p>
+            <h1 className='mr-40'>Me</h1>
+            <h1 className='absolute top-7'>&amp;</h1>
+            <h1 className='ml-40'>You</h1>
           </div>
           <p className='text-justify'>
-            Seperti halnya waktu yang terus berjalan, begitu banyak momen yang telah kita lewati bersama. Setiap detik yang kuhabiskan di sisimu selalu terasa begitu berharga dan indah.
+            Seperti halnya waktu yang terus berjalan, begitu banyak momen yang
+            telah kita lewati bersama. Setiap detik yang kita habiskan selalu
+            terasa begitu berharga dan indah.
           </p>
+          <Timer />
         </div>
-        <div className='col-span-2 rounded-md border shadow'></div>
-      </section>
-      <section className='grid md:grid-cols-2 gap-5'>
-        {cards.map((card, index) => (
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, ease: 'easeOut' }}
-          >
-            <Card
-              key={index}
-              className='flex flex-col'
+        <div className='md:col-span-2 rounded-md border shadow'></div>
+      </Section>
+      <Section title='Tentang Kita'>
+        <div className='grid md:grid-cols-2 gap-5'>
+          {cards.map((card, index) => (
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: 'easeOut' }}
             >
-              <CardHeader>
-                <CardTitle className='text-base'>{card.title}</CardTitle>
-              </CardHeader>
-              <CardContent className='text-muted-foreground text-justify'>
-                <p>{card.description}</p>
-              </CardContent>
-              <CardFooter className='mt-auto'>
-                <Link
-                  to={card.href}
-                  className={buttonVariants({ className: 'ml-auto' })}
-                >
-                  Lihat
-                </Link>
-              </CardFooter>
-            </Card>
-          </motion.div>
-        ))}
-      </section>
+              <Card
+                key={index}
+                className='flex flex-col'
+              >
+                <CardHeader>
+                  <CardTitle className='text-base'>{card.title}</CardTitle>
+                </CardHeader>
+                <CardContent className='text-muted-foreground text-justify'>
+                  <p>{card.description}</p>
+                </CardContent>
+                <CardFooter className='mt-auto'>
+                  <Link
+                    to={card.href}
+                    className={buttonVariants({ className: 'ml-auto' })}
+                  >
+                    Lihat
+                  </Link>
+                </CardFooter>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
     </div>
   );
 }
