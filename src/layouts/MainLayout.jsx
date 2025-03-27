@@ -1,12 +1,12 @@
 import { Outlet } from 'react-router-dom';
-import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
+import Header from '../components/Header.jsx';
 
 export default function MainLayout() {
   return (
-    <div className='container mx-auto flex flex-col min-h-dvh overflow-hidden'>
+    <div className='container mx-auto flex min-h-dvh flex-col overflow-hidden'>
       <Header />
-      <main className='p-5 grow min-h-[calc(100dvh-64px)] mt-16 flex flex-col'>
+      <main className='mt-16 flex min-h-[calc(100dvh-64px)] grow flex-col p-5'>
         <Outlet />
       </main>
       <Footer />

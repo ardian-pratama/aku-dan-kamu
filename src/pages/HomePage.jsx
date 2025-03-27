@@ -1,30 +1,21 @@
-import { buttonVariants } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import { motion } from 'motion/react';
 import Section from '../components/Section.jsx';
 import Timer from '../components/Timer.jsx';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import AboutCard from '../components/AboutCard.jsx'
 
 const cards = [
   {
     title: 'Album',
     description:
-      'Semua hal apapun itu kalau ada kamu di dalamnya nya akan menjadi spesial dan aku selalu menyimpannya karena kamu cantik bangeeet',
+      'Semua kenangan tentang indahnya hari-hari yang sudah kita lewati bersama.',
     href: '/album',
   },
   {
-    title: 'Tentang Kamu',
+    title: 'Petualangan Kita',
     description:
-      'Semua hal yang aku ketahui tentang kamu, walaupun aku masih belum mengenal kamu sepenuhnya tetapi kamu sangat spesial bagiku',
-    href: '/tentang-kamu',
+      'Semua cerita seru dari perjalanan dan petualangan yang telah kita lalui bersama.',
+    href: '/petualangan',
   },
 ];
 
@@ -51,37 +42,13 @@ export default function HomePage() {
             alt='Aku dan Kamu'
             className='rounded-none'
           />
-          <AvatarFallback/>
+          <AvatarFallback />
         </Avatar>
       </Section>
       <Section title='Tentang Kita'>
         <div className='grid md:grid-cols-2 gap-5'>
           {cards.map((card, index) => (
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.75, ease: 'easeOut' }}
-            >
-              <Card
-                key={index}
-                className='flex flex-col'
-              >
-                <CardHeader>
-                  <CardTitle className='text-base'>{card.title}</CardTitle>
-                </CardHeader>
-                <CardContent className='text-muted-foreground text-justify'>
-                  <p>{card.description}</p>
-                </CardContent>
-                <CardFooter className='mt-auto'>
-                  <Link
-                    to={card.href}
-                    className={buttonVariants({ className: 'ml-auto' })}
-                  >
-                    Lihat
-                  </Link>
-                </CardFooter>
-              </Card>
-            </motion.div>
+            <AboutCard key={index} title={card.title} description={card.description} href={card.href}  />
           ))}
         </div>
       </Section>

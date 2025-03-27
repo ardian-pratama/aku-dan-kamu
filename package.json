@@ -19,9 +19,11 @@
     "howler": "^2.2.4",
     "lucide-react": "^0.484.0",
     "motion": "^12.6.0",
+    "prettier-plugin-organize-imports": "^4.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
+    "react-intersection-observer": "^9.16.0",
     "react-router-dom": "^7.4.0",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7"
@@ -39,7 +41,6 @@
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-plugin-organize-attributes": "^1.0.0",
-    "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.17",
     "vite": "^6.2.0"
