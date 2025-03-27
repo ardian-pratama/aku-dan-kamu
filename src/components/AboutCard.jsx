@@ -31,7 +31,11 @@ export default function AboutCard({ title, description, href }) {
           <p>{description}</p>
         </CardContent>
         <CardFooter className='mt-auto'>
-          <Link to={href} className={buttonVariants({ className: 'ml-auto' })}>
+          <Link
+            to={href}
+            className={buttonVariants({ className: 'ml-auto' })}
+            preventScrollReset={true}
+          >
             Lihat
           </Link>
         </CardFooter>
