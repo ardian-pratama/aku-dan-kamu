@@ -1,26 +1,42 @@
 import Section from '../components/Section.jsx';
+import AlbumCard from '../components/AlbumCard.jsx';
+
+const albums = [
+  {
+    title: 'Aku dan kamu',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    src: '/aku-dan-kamu.png',
+    date: new Date(),
+  },
+  {
+    title: 'Bersama',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    src: '/aku-dan-kamu.png',
+    date: new Date(),
+  },
+];
 
 export default function AlbumPage() {
   return (
     <div className='flex flex-col gap-16'>
-      <Section title='Album Kita'>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita,
-          saepe explicabo blanditiis sapiente ab ea! Cumque aspernatur laborum
-          ea eius! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-          commodi exercitationem consequuntur voluptates recusandae, nisi
-          distinctio optio voluptatum quia, dignissimos sapiente quo assumenda.
-          Cumque maiores ex, itaque. Dolore fuga explicabo distinctio autem
-          similique quis esse sed, pariatur neque culpa blanditiis vel
-          architecto sunt molestias hic, ducimus impedit illum omnis! Aspernatur
-          dignissimos, magnam molestiae recusandae nihil dolorum et velit rerum
-          consequuntur, earum expedita temporibus eligendi. Minima ipsum
-          repellendus ipsa, nesciunt pariatur neque. Distinctio corrupti
-          aspernatur temporibus pariatur unde nostrum laborum cupiditate impedit
-          hic id, accusantium obcaecati officiis totam quisquam, iste
-          perferendis modi, vero repellendus quae optio eius numquam velit.
-          Voluptates, voluptas.
+      <Section
+        title='Album Kita'
+        className='grid md:grid-cols-2 gap-5'
+      >
+        <p className='md:col-span-2'>
+          Semua kenangan tentang indahnya hari-hari yang sudah kita lewati
+          bersama.
         </p>
+        {albums.map((album, index) => (
+          <AlbumCard
+            key={index}
+            title={album.title}
+            description={album.description}
+            src={album.src}
+            date={album.date}
+          />
+        ))}
       </Section>
     </div>
   );

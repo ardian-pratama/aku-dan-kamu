@@ -61,6 +61,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-sm text-muted-foreground md:text-base;
+    @apply bg-background text-sm text-muted-foreground;
   }
 }

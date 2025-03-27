@@ -42,7 +42,7 @@ export default function HomePage() {
             alt='Aku dan Kamu'
             className='rounded-none'
           />
-          <AvatarFallback />
+          <AvatarFallback className='rounded-md' />
         </Avatar>
       </Section>
       <Section title='Tentang Kita'>
