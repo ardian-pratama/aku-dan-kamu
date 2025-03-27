@@ -3,17 +3,39 @@ import Section from '../components/Section.jsx';
 
 const albums = [
   {
-    title: 'Aku dan kamu',
+    title: 'Denganmu (pertama)',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-    src: '/aku-dan-kamu.png',
-    date: '2025-03-27T15:00:00Z',
+      'Kali kedua kita beli es krim sama-sama terus makannya tengah hari di danau sambil panas-panasan.',
+    src: '/album-satu.png',
+    date: '2024-11-11',
   },
   {
-    title: 'Bersama',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-    src: '/aku-dan-kamu.png',
-    date: '2025-03-27T15:00:00Z',
+    title: 'Denganmu (kedua)',
+    description:
+      'Walaupun hari lagi hujan ternyata tetap bisa juga kita pergi ke rumah hantu dan foto berdua.',
+    src: '/album-dua.jpg',
+    date: '2024-11-21',
+  },
+  {
+    title: 'Denganmu (ketiga)',
+    description:
+      'Dari awalnya iseng-iseng pengen ke tempat kamu sekalian jalan-jalan, akhirnya kita jumpa juga terus foto berdua lagi.',
+    src: '/album-tiga.jpg',
+    date: '2024-11-23',
+  },
+  {
+    title: 'Denganmu (keempat)',
+    description:
+      'Pagi-pagi langsung sempat-sempatin foto sama kamu dulu karena aku ga bisa kemana-mana setelahnyaa.',
+    src: '/album-empat.jpg',
+    date: '2024-12-14',
+  },
+  {
+    title: 'Denganmu (kelima)',
+    description:
+      'Hari yang selalu ku nanti-nanti bahkan sebelum kita bersama, tapi aku ga tau mau pose apa aja semalam, karena aku jadinya ga bagus dehh.. maaf ya sayaaang.',
+    src: '/album-lima.jpg',
+    date: '2025-02-10',
   },
 ];
 

@@ -1,16 +1,15 @@
-import { Outlet, ScrollRestoration } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Footer from '../components/Footer.jsx';
 import Header from '../components/Header.jsx';
 
 export default function MainLayout() {
   return (
-    <div className='container mx-auto flex min-h-dvh flex-col overflow-hidden'>
+    <div className='flex min-h-dvh flex-col'>
       <Header />
-      <main className='mt-16 flex grow flex-col p-5'>
+      <main className='container mx-auto flex grow flex-col p-5 pt-[84px]'>
         <Outlet />
       </main>
       <Footer />
-      <ScrollRestoration />
     </div>
   );
 }

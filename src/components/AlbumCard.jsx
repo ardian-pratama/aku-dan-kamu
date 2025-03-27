@@ -18,8 +18,12 @@ export default function AlbumCard({ title, description, src, date }) {
       transition={{ duration: 0.75, ease: 'easeOut' }}
       className='flex flex-col gap-4 rounded-md border p-4 shadow'
     >
-      <Avatar className='h-auto w-full'>
-        <AvatarImage src={src} alt={title} className='rounded-md' />
+      <Avatar>
+        <AvatarImage
+          src={src}
+          alt={title}
+          className='wfull h-auto rounded-md'
+        />
         <AvatarFallback className='rounded-md' />
       </Avatar>
       <h2 className='font-bold text-primary'>{title}</h2>
