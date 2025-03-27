@@ -6,7 +6,7 @@ export default function MainLayout() {
   return (
     <div className='container mx-auto flex min-h-dvh flex-col overflow-hidden'>
       <Header />
-      <main className='mt-16 grow p-5 flex flex-col'>
+      <main className='mt-16 flex grow flex-col p-5'>
         <Outlet />
       </main>
       <Footer />

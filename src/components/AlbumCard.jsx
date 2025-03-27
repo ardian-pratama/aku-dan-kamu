@@ -1,23 +1,32 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { formatDate } from '@/lib/utils';
 import { CalendarDays } from 'lucide-react';
-import { formatDate } from '../lib/utils.js';
+import { motion } from 'motion/react';
+import { useInView } from 'react-intersection-observer';
 
 export default function AlbumCard({ title, description, src, date }) {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
   return (
-    <div className='p-4 rounded-md border shadow flex flex-col gap-4'>
-      <Avatar className='w-full h-auto'>
-        <AvatarImage
-          src={src}
-          alt={title}
-          className='rounded-md'
-        />
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 40 }}
+      transition={{ duration: 0.75, ease: 'easeOut' }}
+      className='flex flex-col gap-4 rounded-md border p-4 shadow'
+    >
+      <Avatar className='h-auto w-full'>
+        <AvatarImage src={src} alt={title} className='rounded-md' />
         <AvatarFallback className='rounded-md' />
       </Avatar>
       <h2 className='font-bold text-primary'>{title}</h2>
       <p>{description}</p>
-      <div className='flex gap-2 items-center text-xs mt-auto'>
-        <CalendarDays className='w-5 h-5' /> {formatDate(date)}
+      <div className='mt-auto flex items-center gap-2 text-xs'>
+        <CalendarDays className='h-5 w-5' /> {formatDate(date)}
       </div>
-    </div>
+    </motion.div>
   );
 }

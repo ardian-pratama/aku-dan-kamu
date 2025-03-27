@@ -1,15 +1,14 @@
-import { Link } from 'react-router-dom';
+import { buttonVariants } from '@/components/ui/button';
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
 import { motion } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
-import { buttonVariants } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 export default function AboutCard({ title, description, href }) {
   const { ref, inView } = useInView({
@@ -28,7 +27,7 @@ export default function AboutCard({ title, description, href }) {
         <CardHeader>
           <CardTitle className='text-base'>{title}</CardTitle>
         </CardHeader>
-        <CardContent className='text-muted-foreground text-justify'>
+        <CardContent className='text-justify text-muted-foreground'>
           <p>{description}</p>
         </CardContent>
         <CardFooter className='mt-auto'>
