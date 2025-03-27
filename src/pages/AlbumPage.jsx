@@ -54,6 +54,7 @@ export default function AlbumPage() {
             description={album.description}
             src={album.src}
             date={album.date}
+            className='aspect-square'
           />
         ))}
       </Section>

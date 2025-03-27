@@ -4,7 +4,13 @@ import { CalendarDays } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
 
-export default function AlbumCard({ title, description, src, date }) {
+export default function AlbumCard({
+  title,
+  description,
+  src,
+  date,
+  className,
+}) {
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.2,
@@ -22,12 +28,12 @@ export default function AlbumCard({ title, description, src, date }) {
         <AvatarImage
           src={src}
           alt={title}
-          className='wfull h-auto rounded-md'
+          className={`h-auto w-full rounded-md ${className}`}
         />
         <AvatarFallback className='rounded-md' />
       </Avatar>
       <h2 className='font-bold text-primary'>{title}</h2>
-      <p>{description}</p>
+      <p className='text-justify'>{description}</p>
       <div className='mt-auto flex items-center gap-2 text-xs'>
         <CalendarDays className='h-5 w-5' /> {formatDate(date)}
       </div>

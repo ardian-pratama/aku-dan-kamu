@@ -7,7 +7,7 @@ export default function MainLayout() {
   return (
     <div className='container mx-auto flex min-h-dvh flex-col'>
       <Header />
-      <main className='flex min-h-[calc(100dvh-64px)] flex-col p-5 mt-16'>
+      <main className='mt-16 flex min-h-[calc(100dvh-64px)] flex-col p-5'>
         <Outlet />
       </main>
       <Footer />
