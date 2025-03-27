@@ -6,7 +6,7 @@ import AboutCard from '../components/AboutCard.jsx'
 
 const cards = [
   {
-    title: 'Album',
+    title: 'Album Kita',
     description:
       'Semua kenangan tentang indahnya hari-hari yang sudah kita lewati bersama.',
     href: '/album',

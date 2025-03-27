@@ -14,7 +14,7 @@ import { buttonVariants } from '@/components/ui/button';
 export default function AboutCard({ title, description, href }) {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.3,
+    threshold: 0.2,
   });
 
   return (
@@ -35,6 +35,7 @@ export default function AboutCard({ title, description, href }) {
           <Link
             to={href}
             className={buttonVariants({ className: 'ml-auto' })}
+            preventScrollReset={true}
           >
             Lihat
           </Link>
